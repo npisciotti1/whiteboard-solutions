@@ -14,7 +14,7 @@ function titleCase(title, minorWords) {
  titleArr = title.toLowerCase().split(' ');
 
  for(var i = 0; i < titleArr.length; i++) {
-   if(minWordsArr.indexOf(titleArr[i]) === -1) {
+   if(minWordsArr.indexOf(titleArr[i]) === -1 || i === 0) {
      titleArr[i] = makeTitleCase(titleArr[i]);
    }
  }
