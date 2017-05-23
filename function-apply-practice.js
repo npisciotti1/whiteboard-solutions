@@ -1,5 +1,7 @@
 //A practice in memoization. This was a problem I received during an interview.
 
+//Remember that Function.prototype.apply accepts
+
 function timesTwo(num) {
   return num * 2;
 }
@@ -13,7 +15,7 @@ function memoize(func) {
       return cache[arg];
     }
 
-    var output = func.apply(null, num);
+    var output = func.apply(null, arg);
     cache[arg] = output;
     return output;
   }
