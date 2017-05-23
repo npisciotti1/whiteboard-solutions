@@ -38,13 +38,3 @@ function memoize(func) {
     return output;
   }
 }
-
-//Here is a similar implementation but using Function.prototype.call()
-
-
-function fibonacci(n) {
-  if (n === 0 || n === 1)
-    return n;
-  else
-    return fibonacci(n - 1) + fibonacci(n - 2);
-}
