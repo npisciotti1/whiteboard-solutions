@@ -4,6 +4,17 @@
 //str2 = 'cats';
 //should return true;
 
+//much quicker and non-mutative solution
+function scramble(str1, str2) {
+  var split1 = str1.split('').sort();
+  var split2 = str2.split('').sort();
+  var i = 0;
+
+  for(var x = 0; i < split2.length && x <= split1.length; x++) {
+    if(split2[i] === split1[x]) i++;
+  }
+  return(x <= split1.length);
+}
 
 //slower and less-effective solution which is mutative(expensive)
 function scramble(str1, str2) {
