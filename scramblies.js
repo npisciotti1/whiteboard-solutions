@@ -5,6 +5,7 @@
 //should return true;
 
 
+//slower and less-effective solution which is mutative(expensive)
 function scramble(str1, str2) {
   var split1 = str1.split('');
   var split2 = str2.split('');
