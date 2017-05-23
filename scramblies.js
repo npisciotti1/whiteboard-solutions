@@ -4,17 +4,20 @@
 //str2 = 'cats';
 //should return true;
 
-function scramblies(str1, str2) {
-  var split1 = str1.split(' ').join('').split('');
-  var arrObj = {};
+function scramble(str1, str2) {
+  var split = str1.split(' ').join('').split('');
+  var cache = {};
 
-  for(var i = 0; i < split1.length; i++) {
-    arrObj[i] = split1[i];
+  for(var i = 0; i < split.length; i++) {
+    if(cache[split[i]]) cache[split[i]] += split[i];
+    else cache[split[i]] = split[i];
   }
 
-  while(split1.length) {
-    if(arrObj[split1[0]]) split1.shift();
-    return false;
+  while(split.length) {
+    if(cache[split[0]]) {
+      var removed = split.shift();
+      cache[split[0]] -= removed;
+    } else return false;
   }
   return true;
 }
