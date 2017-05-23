@@ -14,7 +14,7 @@ function memoize(func) {
     }
 
     var output = func.apply(null, num);
-    cache[num] = output;
+    cache[arg] = output;
     return output;
   }
 
