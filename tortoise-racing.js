@@ -1,5 +1,5 @@
 function race(v1, v2, g) {
-  if(v1 <= 0 || v2 <= 0 || g <= 0 || v1 <= v2) return null;
+  if(v1 <= 0 || v2 <= 0 || g <= 0 || v1 >= v2) return null;
   var secs = 0, mins = 0, hours = 0, result = [];
 
   var speedDiff = v2 - v1;
