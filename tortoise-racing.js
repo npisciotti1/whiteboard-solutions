@@ -1,5 +1,6 @@
 //The premise for this questions is as follows: given two velocities (v1 and v2), find the amount
-//of time needed for a person running at "v2" velocity to catch up with a person running at "v1" //velocity who has a lead of "g" feet. Velocity is expressed in ft/hour. The output needs to be
+//of time needed for a person running at "v2" velocity to catch up with a person running at "v1"
+//velocity who has a lead of "g" feet. Velocity is expressed in ft/hour. The output needs to be
 //formatted as such --> [hrs, mins, secs]. Seconds can be rounded to the nearest full number.
 
 function race(v1, v2, g) {
