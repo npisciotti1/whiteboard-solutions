@@ -14,7 +14,18 @@
 //  addTwo(3); // 5
 //  addTwo(3)(5); // 10
 
+function add(n) {
+  var cache = 0;
 
+  if(n) {
+    cache += n;
+    return function() {
+
+    }
+  }
+}
+
+//This is a function that accepts a functions and returns a "curried" version of it.
 function curry(fx) {
   var arity = fx.length;
 
