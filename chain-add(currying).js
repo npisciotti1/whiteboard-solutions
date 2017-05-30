@@ -14,6 +14,7 @@
 //  addTwo(3); // 5
 //  addTwo(3)(5); // 10
 
+//Optimized working solution
 function add(n) {
   function f(x) {
     return add(x + n)
