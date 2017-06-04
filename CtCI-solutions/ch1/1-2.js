@@ -25,3 +25,19 @@ function checkPermutation(str1, str2) {
 
   return map.size === 0;
 }
+
+//this ver accepts two strings of different lengths and will make the same check to see if
+//the shorter string can be made with the longer
+
+function checkPermutation2(longerStr, shorterStr) {
+  if(str1.length === 0 || str2.length === 0) return false;
+
+  var split1 = longerStr.split('').sort();
+  var split2 = shorterStr.split('').sort();
+  var i = 0;
+
+  for(var x = 0; i < split2.length && x <= split1.length; x++) {
+    if(split2[i] === split1[x]) i++;
+  }
+  return x <= split1.length;
+}
