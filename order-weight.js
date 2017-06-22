@@ -1,4 +1,3 @@
-
 function orderWeight(str) {
   return str
     .split(' ')
@@ -11,9 +10,9 @@ function orderWeight(str) {
       }
     })
     .sort((a, b) => {
-      if(a.weight < b.weight) return -1;
-      if(a.weight > b.weight) return 1;
-      return 0;
+      return a.weight == b.weight
+      ? a.val.localeCompare(b.val)
+      : (a.weight - b.weight)
     })
     .map( obj => obj.val)
     .join(' ');
