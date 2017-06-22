@@ -5,15 +5,13 @@ function orderWeight(str) {
 
   function countWeight(num) {
     let split = num.toString().split('');
-    return split.reduce( (acc, val) => {
-      acc += val;
-    });
+    return split.reduce( (acc, val) => acc + val);
   }
 
   for(var i = 0; i < splitStr.length; i++) {
     objArr.push({
       val: splitStr[i],
-      weight: countWeight(splitStr[i])
+      weight: countWeight.call(null, splitStr[i])
     });
   }
 
