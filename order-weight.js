@@ -20,4 +20,10 @@ function orderWeight(str) {
     if(a.weight > b.weight) return 1;
     return 0;
   });
+
+  objArr = objArr.map( (el) => {
+    return el.val.toString();
+  });
+
+  return objArr.sort();
 }
