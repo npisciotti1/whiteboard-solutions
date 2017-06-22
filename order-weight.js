@@ -11,7 +11,7 @@ function orderWeight(str) {
   for(var i = 0; i < splitStr.length; i++) {
     objArr.push({
       val: splitStr[i],
-      weight: countWeight.call(null, splitStr[i])
+      weight: countWeight(splitStr[i])
     });
   }
 
