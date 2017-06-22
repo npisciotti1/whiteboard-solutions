@@ -1,5 +1,4 @@
 
-//incomplete
 function orderWeight(str) {
   var splitStr = str.split('');
   var objArr = [];
