@@ -1,23 +1,23 @@
-function eval(operand, num) {
+function calc(num, operand) {
   return (operand)
   ? operand.call(operand, num)
   : num
 }
 
-function zero(operand) { return eval(operand, 0)}
-function one(operand) { return eval(operand, 1)}
-function two(operand) { return eval(operand, 2)}
-function three(operand) { return eval(operand, 3)}
-function four(operand) { return eval(operand, 4)}
-function five(operand) { return eval(operand, 5)}
-function six(operand) { return eval(operand, 6)}
-function seven(operand) { return eval(operand, 7)}
-function eight(operand) { return eval(operand, 8)}
-function nine(operand) { return eval(operand, 9)}
+function zero(operand) { return calc(0, operand)}
+function one(operand) { return calc(1, operand)}
+function two(operand) { return calc(2, operand)}
+function three(operand) { return calc(3, operand)}
+function four(operand) { return calc(4, operand)}
+function five(operand) { return calc(5, operand)}
+function six(operand) { return calc(6, operand)}
+function seven(operand) { return calc(7, operand)}
+function eight(operand) { return calc(8, operand)}
+function nine(operand) { return calc(9, operand)}
 
 function plus(a) {
   return function(b) {
-    return a + b;
+    return b + a;
   }
 }
 
@@ -29,7 +29,7 @@ function minus(a) {
 
 function times(a) {
   return function(b) {
-    return a * b;
+    return b * a;
   }
 }
 
