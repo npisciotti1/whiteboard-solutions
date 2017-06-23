@@ -1,19 +1,19 @@
-function calc(num, operand) {
+function calc(operand, num) {
   return (operand)
   ? operand.call(operand, num)
   : num
 }
 
-function zero(operand) { return calc(0, operand)}
-function one(operand) { return calc(1, operand)}
-function two(operand) { return calc(2, operand)}
-function three(operand) { return calc(3, operand)}
-function four(operand) { return calc(4, operand)}
-function five(operand) { return calc(5, operand)}
-function six(operand) { return calc(6, operand)}
-function seven(operand) { return calc(7, operand)}
-function eight(operand) { return calc(8, operand)}
-function nine(operand) { return calc(9, operand)}
+function zero(operand) { return calc(operand, 0)}
+function one(operand) { return calc(operand, 1)}
+function two(operand) { return calc(operand, 2)}
+function three(operand) { return calc(operand, 3)}
+function four(operand) { return calc(operand, 4)}
+function five(operand) { return calc(operand, 5)}
+function six(operand) { return calc(operand, 6)}
+function seven(operand) { return calc(operand, 7)}
+function eight(operand) { return calc(operand, 8)}
+function nine(operand) { return calc(operand, 9)}
 
 function plus(a) {
   return function(b) {
