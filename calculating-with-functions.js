@@ -23,7 +23,7 @@ function plus(a) {
 
 function minus(a) {
   return function(b) {
-    return a - b;
+    return b - a;
   }
 }
 
@@ -35,6 +35,6 @@ function times(a) {
 
 function dividedBy(a) {
   return function(b) {
-    return a / b;
+    return b / a;
   }
 }
