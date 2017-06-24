@@ -24,7 +24,6 @@ function uniqueInOrder(iterable) {
   var result = [];
 
   if(typeof iterable === 'string') {
-    console.log('we got a string');
     var splitStr = iterable.split('');
     for(var i = 0; i < splitStr.length; i++) {
       var next = i + 1;
@@ -34,7 +33,6 @@ function uniqueInOrder(iterable) {
     }
     return result;
   } else {
-    console.log('we got an array');
     for(var i = 0; i < iterable.length; i++) {
       var next = i + 1;
       if(iterable[i] !== iterable[next]) {
