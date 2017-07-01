@@ -5,3 +5,6 @@
 - Uppercasing is preserved.
 - The letter 'z || Z' will becoming either 'a || A'
 */
+
+//Input: 'Akk ir Vekk!'
+//Output: 'All is Well!'
