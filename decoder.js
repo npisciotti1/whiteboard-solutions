@@ -16,7 +16,7 @@ function decoder(input) {
 		.split('')
 		.map((curVal, idx, arr) => {
 			let charVal = curVal.charCodeAt();
-			if (midCharCodes.indexOf(charVal) > 0) return curval;
+			if (midCharCodes.indexOf(charVal) > 0) return curVal;
 			if (vowelCodes.indexOf(charVal) === -1 && charVal > 65 && charVal < 123) {
 				if (curVal === 'z') return 'a';
 				if (curVal === 'Z') return 'A';
