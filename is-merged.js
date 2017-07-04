@@ -11,3 +11,7 @@ The interviewer gives you the following example and tells you to figure out the 
 part1:  c   d   w         = cdw
 part2:    o   e   a r s   = oears
 */
+
+function isMerge(s, part1, part2) {
+	return false;
+}
