@@ -26,5 +26,5 @@ function isMerge(s, part1, part2) {
 		}
 		return false;
 	}
-	return false;
+	return true;
 }
