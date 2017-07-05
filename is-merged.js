@@ -13,5 +13,18 @@ part2:    o   e   a r s   = oears
 */
 
 function isMerge(s, part1, part2) {
+	var p1 = 0;
+	var p2 = 0;
+
+	for (var i = 0; i < s.length; i++) {
+		if (s[i] === part1[p1]) {
+			p1++;
+			continue;
+		} else if (s[i] === part2[p2]) {
+			p2++;
+			continue;
+		}
+		return false;
+	}
 	return false;
 }
