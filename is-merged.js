@@ -28,3 +28,17 @@ function isMerge(s, part1, part2) {
 	}
 	return true;
 }
+
+const sHead = s => s.substr(0, 1);
+const sTail = s => s.substr(1);
+const isEmpty = s => s === '';
+const firstCharEqual = (x, y) => shead(x) === shead(y);
+
+const isMerge = (s, x, y) => {
+	if (isEmpty(s)) return isEmpty(x) && isEmpty(y);
+	else if (firstCharEqual(s, x) && firstCharEqual(s, y))
+		return isMerge(stail(s), stail(x), y) || isMerge(stail(s), x, stail(y));
+	else if (firstCharEqual(s, x)) return isMerge(stail(s), stail(x), y);
+	else if (firstCharEqual(s, y)) return isMerge(stail(s), x, stail(y));
+	else return false;
+};
