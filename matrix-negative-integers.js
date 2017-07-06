@@ -13,3 +13,20 @@ var matrix = [
 
 var n = matrix.length;
 var m = matrix[0].length;
+
+
+function countNegativeInts(matrix, n, m) {
+  var count = 0;
+  var i = 0;
+  var j = m - 1;
+
+  while(i < n && j >= 0) {
+    if(matrix[i][j] < 0) {
+      count += (j + 1);
+      i++;
+      continue;
+    }
+    j--
+  }
+  return count;
+}
