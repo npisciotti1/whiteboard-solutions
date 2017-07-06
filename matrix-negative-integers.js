@@ -30,3 +30,5 @@ function countNegativeInts(matrix, n, m) {
   }
   return count;
 }
+
+//Output: should be 10 (number of negative ints)
