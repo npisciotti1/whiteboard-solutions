@@ -12,33 +12,21 @@ part1:  c   d   w         = cdw
 part2:    o   e   a r s   = oears
 */
 
-function isMerge(s, part1, part2) {
-	var p1 = 0;
-	var p2 = 0;
+const strHead = str => str.substr(0, 1);
+const strTail = str => str.substr(1);
+const isEmpty = str => str === '';
+const compareFirstChars = (x, y) => strHead(x) === strHead(y);
 
-	for (var i = 0; i < s.length; i++) {
-		if (s[i] === part1[p1]) {
-			p1++;
-			continue;
-		} else if (s[i] === part2[p2]) {
-			p2++;
-			continue;
-		}
-		return false;
-	}
-	return true;
+function isMerge(s, p1, p2) {
+	if (isEmpty(s)) return isEmpty(p1) && isEmpty(p2);
+  else if (compareFirstChars(s, p1) && compareFirstChars(s, p2)) {
+    return (
+      isMerge(strTail(s), strTail(p1), p2) ||
+      isMerge(strTail(s), p1, strTail(p2))
+    );
+  } else if (compareFirstChars(s, p1)) {
+    return isMerge(strTail(s), strTail(p1), p2);
+  } else if (compareFirstChars(s, p2)) {
+    return isMerge(strTail(s), p1, strTail(p2))
+  } else return false
 }
-
-const sHead = s => s.substr(0, 1);
-const sTail = s => s.substr(1);
-const isEmpty = s => s === '';
-const firstCharEqual = (x, y) => shead(x) === shead(y);
-
-const isMerge = (s, x, y) => {
-	if (isEmpty(s)) return isEmpty(x) && isEmpty(y);
-	else if (firstCharEqual(s, x) && firstCharEqual(s, y))
-		return isMerge(stail(s), stail(x), y) || isMerge(stail(s), x, stail(y));
-	else if (firstCharEqual(s, x)) return isMerge(stail(s), stail(x), y);
-	else if (firstCharEqual(s, y)) return isMerge(stail(s), x, stail(y));
-	else return false;
-};
