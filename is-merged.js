@@ -3,7 +3,6 @@ Write an algorithm to check if a given string, s, can be formed from two other s
 
 The restriction is that the characters in part1 and part2 are in the same order as in s.
 
-The interviewer gives you the following example and tells you to figure out the rest from the given test cases.
 
 'codewars' is a merge from 'cdw' and 'oears':
 
