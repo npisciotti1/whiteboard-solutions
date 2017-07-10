@@ -5,7 +5,7 @@
 // Output: 3
 
 function findOdd(arr) {
-    arr = arr.sort();
+    arr.sort();
     var counter = 1;
 
     for(var i = 0; i < arr.length; i++) {
