@@ -8,7 +8,7 @@
 function sumStrings(a,b) {
   let result = 0;
   for(var i = 0; i < arguments.length; i++) {
-    result += +arguments[i];
+    result += Number(arguments[i]);
   }
   return result.toString();
 }
