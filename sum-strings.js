@@ -5,6 +5,8 @@
 
 // sumStrings('1','2') // => '3'
 
+
+//first solution doesnt handle numbers bigger than Number.MAX_SAFE_INTEGER
 function sumStrings(a,b) {
   let result = 0;
   for(var i = 0; i < arguments.length; i++) {
@@ -13,7 +15,9 @@ function sumStrings(a,b) {
   return result.toString();
 }
 
-function sumStrings(a, b) {
+//Second solution is working but doesn't handle the Kata properly for a test case.
+
+function sumStrings2(a, b) {
   a += '' , b += '';
   var res = [], carry = 0, lena = a.length, lenb = b.length;
   if(lena > lenb) {
@@ -28,4 +32,16 @@ function sumStrings(a, b) {
   }
   if(carry) res.push(carry);
   return res.reverse().join('');
+}
+
+//Nifty Helper function that deals with JS's Number.MAX_SAFE_INTEGER
+
+function toFix(val){
+  var str='';
+  while (val > 0) {
+    let num = val % 10;
+    val = Math.trunc(val / 10);
+    str = num + str;
+  }
+  return str;
 }
