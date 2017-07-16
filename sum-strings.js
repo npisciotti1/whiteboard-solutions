@@ -17,7 +17,7 @@ function sumStrings(a,b) {
 
 //Second solution is working but doesn't handle the Kata properly for a test case.
 
-function sumStrings2(a, b) {
+function sumStrings(a, b) {
   a += '' , b += '';
   var res = [], carry = 0, lena = a.length, lenb = b.length;
   if(lena > lenb) {
@@ -29,9 +29,14 @@ function sumStrings2(a, b) {
     var add = +(a.charAt(i)) + +(b.charAt(i)) + carry;
     res.push(add%10);
     carry = (add - (add%10)) / 10;
+    console.log('add:', add);
   }
   if(carry) res.push(carry);
-  return res.reverse().join('');
+  res.reverse();
+
+  //this silly line checks for a case in which the first int is 0 (bug).
+  if(res[0] === 0) res.shift();
+  return res.join('');
 }
 
 //Nifty Helper function that deals with JS's Number.MAX_SAFE_INTEGER
