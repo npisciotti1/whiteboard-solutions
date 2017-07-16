@@ -35,7 +35,7 @@ function sumStrings(a, b) {
   res.reverse();
 
   //this silly line checks for a case in which the first int is 0 (bug).
-  if(res[0] === 0) res.shift();
+  while(res[0] === 0) res.shift();
   return res.join('');
 }
 
