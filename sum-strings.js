@@ -6,5 +6,9 @@
 // sumStrings('1','2') // => '3'
 
 function sumStrings(a,b) {
-
+  let result = 0;
+  for(var i = 0; i < arguments.length; i++) {
+    result += parseInt(arguments[i], 10);
+  }
+  return result.toString();
 }
