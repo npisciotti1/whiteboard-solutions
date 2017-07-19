@@ -28,30 +28,16 @@
 // the correctly sorted array should be returned.
 
 function removeZeros(arr) {
-  var oldLength = arr.length;
-
-  //place the zeroes at the end
-  for(var i = 0; i < arr.length; i++) {
-    if(+arr[i] === 0) {
-      arr[arr.length] = arr[i];
-    }
-  }
-
-  // [1,0,10,0,8,25,]
-
-  for(var i = 0; i < arr.length; i++) {
-    //if there are two consecutive zeroes
-    if(+arr[i] === 0 && +arr[i+1] === 0) {
+  for(var i = arr.length - 1; i >= 0; i--) {
+    if(arr[i] === 0 || arr[i] === '0') {
       var j = i;
-      while(+arr[j+1] === 0)
-      j++
 
-    }
-    //if there is a zero and the next is a number
-    if(+arr[i] === 0 && +arr[i+1] !== 0) {
-      arr[i] = arr[i+1];
-      flag = true;
-      continue;
+      while(j+1 < arr.length && arr[j+1] !== 0 && arr[j+1] !== '0') {
+        var temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+        j++
+      }
     }
   }
   return arr;
