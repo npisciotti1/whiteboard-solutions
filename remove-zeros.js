@@ -30,19 +30,24 @@
 function removeZeros(arr) {
   var oldLength = arr.length;
 
+  //place the zeroes at the end
   for(var i = 0; i < arr.length; i++) {
     if(+arr[i] === 0) {
       arr[arr.length] = arr[i];
     }
   }
 
+  // [1,0,10,0,8,25,]
+
   for(var i = 0; i < arr.length; i++) {
+    //if there are two consecutive zeroes
     if(+arr[i] === 0 && +arr[i+1] === 0) {
       var j = i;
       while(+arr[j+1] === 0)
-      //increment j
-    }
+      j++
 
+    }
+    //if there is a zero and the next is a number
     if(+arr[i] === 0 && +arr[i+1] !== 0) {
       arr[i] = arr[i+1];
       flag = true;
