@@ -16,16 +16,38 @@
 //You are NOT allowed to use any temporary arrays or objects. You are also not allowed
 //to use any Array.prototype or Object.prototype methods.
 
-function removeZeros(array) {
-  // Sort "array" so that all elements with the value of zero are moved to the
-  // end of the array, while the other elements maintain order.
-  // [0, 1, 2, 0, 3] --> [1, 2, 3, 0, 0]
-  // Zero elements also maintain order in which they occurred.
-  // [0, "0", 1, 2, 3] --> [1, 2, 3, 0, "0"]
+// Sort "array" so that all elements with the value of zero are moved to the
+// end of the array, while the other elements maintain order.
+// [0, 1, 2, 0, 3] --> [1, 2, 3, 0, 0]
+// Zero elements also maintain order in which they occurred.
+// [0, "0", 1, 2, 3] --> [1, 2, 3, 0, "0"]
 
-  // Do not use any temporary arrays or objects. Additionally, you're not able
-  // to use any Array or Object prototype methods such as .shift(), .push(), etc
+// Do not use any temporary arrays or objects. Additionally, you're not able
+// to use any Array or Object prototype methods such as .shift(), .push(), etc
 
-  // the correctly sorted array should be returned.
-  return array;
+// the correctly sorted array should be returned.
+
+function removeZeros(arr) {
+  var oldLength = arr.length;
+
+  for(var i = 0; i < arr.length; i++) {
+    if(+arr[i] === 0) {
+      arr[arr.length] = arr[i];
+    }
+  }
+
+  for(var i = 0; i < arr.length; i++) {
+    if(+arr[i] === 0 && +arr[i+1] === 0) {
+      var j = i;
+      while(+arr[j+1] === 0)
+      //increment j
+    }
+
+    if(+arr[i] === 0 && +arr[i+1] !== 0) {
+      arr[i] = arr[i+1];
+      flag = true;
+      continue;
+    }
+  }
+  return arr;
 }
