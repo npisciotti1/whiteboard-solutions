@@ -29,7 +29,6 @@ function sumStrings(a, b) {
     var add = +(a.charAt(i)) + +(b.charAt(i)) + carry;
     res.push(add%10);
     carry = (add - (add%10)) / 10;
-    console.log('add:', add);
   }
   if(carry) res.push(carry);
   res.reverse();
