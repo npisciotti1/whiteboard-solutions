@@ -5,3 +5,7 @@
 // "zero nine five two" -> "four"
 
 // If the string is empty or includes a number greater than 9, return "n/a"
+
+function averageString(str) {
+  
+}
