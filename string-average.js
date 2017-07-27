@@ -19,7 +19,7 @@ function averageString(str) {
   return getKeyByValue(valMap, result);
 }
 
-//This nifty helper allows us to pass an object and a value to return a key/prop
+//This nifty helper allows us to pass an object and a value to return a key/propg
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
