@@ -8,15 +8,18 @@
 
 function averageString(str) {
   let result = 0;
-  var map = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+  let valMap = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'n/a': NaN}
   str.split(' ')
   .forEach( num => {
-    result += map[num];
+    result += valMap[num];
   });
 
-  return Math.floor(result / str.split(' ').length);
+  result = Math.floor(result / str.split(' ').length);
+
+  return getKeyByValue(valMap, result);
 }
 
+//This nifty helper allows us to pass an object and a value to return a key/prop
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
