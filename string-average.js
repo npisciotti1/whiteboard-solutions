@@ -14,5 +14,9 @@ function averageString(str) {
     result += map[num];
   });
 
+  return map[result / str.split(' ').length];
+}
 
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
 }
