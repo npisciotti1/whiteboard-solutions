@@ -50,5 +50,9 @@
 // 7  |           z
 // 8  |           a
 // 9  |           b
-// 10  |           c
-// 11  |           d
+// 10 |           c
+// 11 |           d
+
+function hamsterMe(code, message) {
+    return message;
+}
