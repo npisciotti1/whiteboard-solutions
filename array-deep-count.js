@@ -13,6 +13,8 @@
 // >>>>> 7
 //The input will always be an array.
 
+
+//Solution passes most cases but doesn't pass kata.
 let a = [1, 2, [3, 4, [5]]]
 
 function deepCount(a, count){
@@ -26,4 +28,17 @@ function deepCount(a, count){
     count++;
   }
   return count;
+}
+
+//This solution does solve the kata.
+function deepCount(a) {
+  return a.reduce( (sum, el) => {
+    return(
+      sum += (
+        Array.isArray(el)
+        ? deepCount(el)
+        : 0
+      )
+    )
+  }, a.length);
 }
