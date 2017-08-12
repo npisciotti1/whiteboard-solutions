@@ -13,14 +13,17 @@
 // >>>>> 7
 //The input will always be an array.
 
+let a = [1, 2, [3, 4, [5]]]
 
 function deepCount(a, count){
   count = count || 0;
 
-  if(!Array.isArray(a)) return a;
-
-  let flatArr = [];
   for(var i = 0; i < a.length; i++) {
-    
+    if(Array.isArray(a[i])) {
+      count++
+      return deepCount(a[i], count);
+    }
+    count++;
   }
+  return count;
 }
