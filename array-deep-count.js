@@ -14,6 +14,13 @@
 //The input will always be an array.
 
 
-function deepCount(a){
-  //...
+function deepCount(a, count){
+  count = count || 0;
+
+  if(!Array.isArray(a)) return a;
+
+  let flatArr = [];
+  for(var i = 0; i < a.length; i++) {
+    
+  }
 }
