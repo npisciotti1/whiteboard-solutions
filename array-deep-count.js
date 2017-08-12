@@ -18,7 +18,7 @@ let a = [1, 2, [3, 4, [5]]]
 function deepCount(a, count){
   count = count || 0;
 
-  for(var i = 0; i < a.length; i++) {
+  for(var i = 0; i < a.length + 1; i++) {
     if(Array.isArray(a[i])) {
       count++
       return deepCount(a[i], count);
