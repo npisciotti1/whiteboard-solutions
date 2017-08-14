@@ -9,3 +9,7 @@
 //nextBigger(9)==-1
 //nextBigger(111)==-1
 //nextBigger(531)==-1
+
+function nextBigger(n){
+  //your code here
+}
