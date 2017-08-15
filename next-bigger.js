@@ -14,12 +14,12 @@ function nextBigger(n){
   let splitNum = n.toString().split('');
   let combs = [], temp = '';
   let numCombs = Math.pow(2, splitNum.length);
-  
+
 
   for(var i = 0; i < numCombs; i++) {
     temp = '';
     for(var j = 0; j < splitNum.length; j++) {
-      if(i & Math.pow(2, j) {
+      if(i & Math.pow(2, j)) {
         console.log('hit conditional. i: ', i, 'j: ', j);
         temp += splitNum[j];
       }
