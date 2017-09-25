@@ -1,6 +1,6 @@
 //Currying and partial application are two ways of transforming a function into another //function with a generally smaller arity. While they are often confused with each other, //they work differently. The goal is to learn to differentiate them.
 
-/*Currying:
+/* Currying:
 
 Take a simple add function and create a curried version of it:
 
@@ -21,7 +21,21 @@ function curriedAdd(a) {
 }
 curriedAdd(3)(4)(5)
 --> 12
-
 */
+
+/* Partial Application:
+
+The process of fixing a number of arguments to a function, producing another function of
+smaller arity.
+
+function partialAdd(a) {
+  return function(b, c) {
+    return add(a, b, c);
+  };
+}
+partialAdd(3)(4, 5)
+--> 12
+*/
+
 function curryPartial(fn) {
 }
