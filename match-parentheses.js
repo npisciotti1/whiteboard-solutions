@@ -10,5 +10,14 @@
 //We can use a stack to manage our comparisons.
 
 const matchParens = (str) => {
-  let closingParens = ']})';
+  let stack = [];
+  let matchingBraces = {
+    '{' : '}',
+    '(' : ')',
+    '[' : ']'
+  }
+
+  for(var i = 0; i < data.length; i++) {
+    if(braces[data[i]])
+  }
 }
