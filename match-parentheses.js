@@ -9,4 +9,6 @@
 
 //We can use a stack to manage our comparisons.
 
-let data = '{}()'
+const matchParens = (str) => {
+  let closingParens = ']})';
+}
