@@ -30,6 +30,7 @@ const matchParens = (data) => {
       if(!braces[top] === char) return false;
     }
   }
+  if(stack.length) return false;
 
   return true;
 }
